@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="gilroy/FontsStylesheet.css" rel="stylesheet" />
+    <title>CMS Dashdoard</title>
+    <meta
+      name="description"
+      content="Webpage for managing students data, managing tasks(to do in progress done) and messaging"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="loader">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="menu" onclick="toggleNav()">
+        <div class="menu-element menu-element-1"></div>
+        <div class="menu-element menu-element-divider"></div>
+        <div class="menu-element menu-element-2"></div>
+      </div>
+      <ul class="message-profile-list">
+        <li>
+          <div class="bell-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.8em"
+              height="1.8em"
+              viewBox="0 0 24 24"
+              class="bell-icon-svg"
+            >
+              <g
+                fill="none"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-width="1.5"
+              >
+                <path stroke-dasharray="4" stroke-dashoffset="4" d="M12 3V5">
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    dur="0.2s"
+                    values="4;0"
+                  />
+                </path>
+                <path
+                  stroke-dasharray="28"
+                  stroke-dashoffset="28"
+                  d="M12 5C8.68629 5 6 7.68629 6 11L6 17C5 17 4 18 4 19H12M12 5C15.3137 5 18 7.68629 18 11L18 17C19 17 20 18 20 19H12"
+                >
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    begin="0.2s"
+                    dur="0.4s"
+                    values="28;0"
+                  />
+                </path>
+                <path
+                  stroke-dasharray="8"
+                  stroke-dashoffset="8"
+                  d="M10 20C10 21.1046 10.8954 22 12 22C13.1046 22 14 21.1046 14 20"
+                >
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    begin="0.6s"
+                    dur="0.2s"
+                    values="8;0"
+                  />
+                </path>
+              </g>
+            </svg>
+          </div>
+        </li>
+        <li>
+          <div class="profile-preview-container">
+            <img
+              src="img/avatarplaceholder.png"
+              class="avatar-image"
+              alt="pictureOfUserProfile"
+            />
+            <p class="user-profile-name">Denys Losiev</p>
+          </div>
+        </li>
+      </ul>
+      <div class="message-container">
+        <ul class="message-list">
+          <li>
+            <div class="message-image">
+              <img
+                src="img/avatarplaceholder1.png"
+                class="avatar-image"
+                alt="personOneImage"
+              />
+              <p class="message-name">Friend 1</p>
+            </div>
+            <div class="message-background">
+              <p>Hi! message 1.</p>
+            </div>
+          </li>
+          <li>
+            <div class="message-image">
+              <img
+                src="img/avatarplaceholder2.png"
+                class="avatar-image"
+                alt="personTwoImage"
+              />
+              <p class="message-name">Friend 2</p>
+            </div>
+            <div class="message-background">
+              <p>Hi! message 2.</p>
+            </div>
+          </li>
+          <li>
+            <div class="message-image">
+              <img
+                src="img/avatarplaceholder3.png"
+                class="avatar-image"
+                alt="personThreeImage"
+              />
+              <p class="message-name">Friend 3</p>    
+            </div>
+            <div class="message-background">
+              <p>Hi! message 3.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="profile-container">
+        <ul class="profile-menu-ul">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <nav class="navigation-container">
+      <h1 class="navigation-logo">
+        <a href="students.html" style="text-decoration: none; color: black">CMS</a>
+      </h1>
+      <ul class="navigation-list">
+        <li class="selected">
+          <a href="dashboard.html">Dashboard</a>
+        </li>
+        <li>
+          <a href="students.html">Students</a>
+        </li>
+        <li>
+          <a href="tasks.html">Tasks</a>
+        </li>
+      </ul>
+    </nav> 
+  </body>
+</html>
