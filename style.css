@@ -161,6 +161,7 @@ span {
   margin: 0;
   padding: 0;
 }
+
 .bell-container {
   padding-right: 20px;
   padding-top: 10px;
@@ -168,6 +169,7 @@ span {
 .bell-container:hover {
   animation: ring 0.5s ease-in-out;
 }
+
 @keyframes ring {
   0% {
     transform: rotate(0deg);
@@ -428,7 +430,7 @@ span {
 
   padding-top: 2%;
 
-  background-color: #4D55CC;
+  background-color: #FFD700;
 
   box-shadow: 0 0 15px rgba(51, 51, 51, 0.2);
   border-radius: 0 50px 50px 0;
@@ -496,7 +498,7 @@ button {
   border: none;
 
   box-shadow: 0 0 5px rgba(153, 153, 153, 0.3);
-  background-color: #4D55CC;
+  background-color: #FFD700;
 
   font-size: 15px;
   font-weight: 500;
@@ -520,7 +522,7 @@ button {
 }
 
 .add-student-button:active {
-  background-color: #211C84;
+  background-color: #f8f1ac;
 }
 
 .add-student-button:active {
@@ -529,6 +531,15 @@ button {
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
 
 /*TABLE STUDENTS*/
+.title {
+  position: absolute;
+  left: 15%; 
+  top: 14%;
+  font-family: Gilroy;
+  font-size: 50px;
+  font-weight: 500;
+  transform: translateX(0); 
+}
 .table-container {
   position: absolute;
   left: 50%;
@@ -687,7 +698,7 @@ tr {
   opacity: 1;
 }
 tr.selected {
-  background-color: #B5A8D5;
+  background-color: #FFFDD0;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
@@ -714,7 +725,7 @@ tr.selected {
   flex-grow: 1;
   width: var(--pagination-width);
   height: 5px;
-  background-color: #4D55CC;
+  background-color: #FFD700;
   transition: opacity 0.5s ease;
 }
 .active {
@@ -886,7 +897,7 @@ tr.selected {
   height: 3vw;
   width: 9vw;
 
-  background-color: #4D55CC;
+  background-color: #FFD700;
 
   z-index: 11;
 }
@@ -911,12 +922,12 @@ tr.selected {
 
   background-color: white;
 
-  outline: 1px solid #4D55CC;
+  outline: 1px solid #FFD700;
 
   z-index: 11;
 }
 .button-cancle:active {
-  background-color: #4D55CC;
+  background-color: #FFD700;
 }
 
 .add-own-group {
@@ -1025,7 +1036,7 @@ tr.selected {
   height: 2.5vw;
   width: 8vw;
 
-  background-color: #4D55CC;
+  background-color: #FFD700;
 
   z-index: 11;
 }
@@ -1039,7 +1050,7 @@ tr.selected {
 
   background-color: white;
 
-  outline: 1px solid #4D55CC;
+  outline: 1px solid #FFD700;
 
   z-index: 11;
 }
@@ -1048,7 +1059,7 @@ tr.selected {
 }
 
 .button-cancle-deletion:active {
-  background-color: #4D55CC;
+  background-color: #FFD700;
 }
 .deletion-name {
   position: absolute;
@@ -1074,7 +1085,51 @@ tr.selected {
   font-weight: bold;
 }
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1300px) {
+  
+  .message-background {
+    font-size: 15px;
+  }
+  .message-container {
+    right: 16.5%;
+    width: 29vw;
+  }
+  .form-add-student {
+    height: 40vw;
+  }
+  .deletion-text {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .deletion-text-start {
+    font-size: 20px;
+    font-family: Gilroy;
+  }
+  .student-name-deletion {
+    font-size: 21px;
+    font-family: Gilroy;
+    font-weight: bold;
+  }
+}
+
 @media screen and (max-width: 1025px) {
+  .title {
+    position: absolute;
+    left: 5%; 
+    top: 14%;
+    font-family: Gilroy;
+    font-size: 50px;
+    font-weight: 500;
+    transform: translateX(0); 
+    
+  }
   .navigation-logo {
     position: relative;
     margin: 0;
@@ -1204,40 +1259,10 @@ tr.selected {
     height: 20vw;
   }
 }
-@media screen and (max-width: 1300px) {
-  .message-background {
-    font-size: 15px;
-  }
-  .message-container {
-    right: 16.5%;
-    width: 29vw;
-  }
-  .form-add-student {
-    height: 40vw;
-  }
-  .deletion-text {
-    position: absolute;
-    top: 24%;
-    left: 50%;
-    transform: translateX(-50%);
 
-    width: 30vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .deletion-text-start {
-    font-size: 20px;
-    font-family: Gilroy;
-  }
-  .student-name-deletion {
-    font-size: 21px;
-    font-family: Gilroy;
-    font-weight: bold;
-  }
-}
 
 @media screen and (max-width: 900px) {
+  
   .message-background {
     font-size: 15px;
   }
@@ -1474,6 +1499,16 @@ tr.selected {
   }
 }
 @media screen and (max-width: 480px) {
+  .title {
+    position: absolute;
+    left: 5%; 
+    top: 9%;
+    font-family: Gilroy;
+    font-size: 50px;
+    font-weight: 500;
+    transform: translateX(0); 
+    
+  }
   .form-add-student {
     height: 110vw;
     width: 80vw;
@@ -1563,6 +1598,16 @@ tr.selected {
   }
 }
 @media screen and (max-width: 400px) {
+  .title {
+    position: absolute;
+    left: 5%; 
+    top: 11%;
+    font-family: Gilroy;
+    font-size: 35px;
+    font-weight: 500;
+    transform: translateX(0); 
+    
+  }
   .form-add-student {
     height: 140vw;
     width: 80vw;

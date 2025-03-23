@@ -30,13 +30,14 @@
       <ul class="message-profile-list">
         <li>
           <div class="bell-container">
-            <a href="message.html">
+            <a class="bellLink" href="message.html" aria-label="Notifications">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1.8em"
                 height="1.8em"
                 viewBox="0 0 24 24"
                 class="bell-icon-svg"
+                
               >
                 <g
                   fill="none"
@@ -80,6 +81,7 @@
                   </path>
                 </g>
               </svg>
+
             </a>
           </div>
         </li>
@@ -193,6 +195,9 @@
           />
         </svg>
       </div>
+      <div class="student">
+      <p class="title">Students</p>
+      </div>
 
       <div class="table-container">
         <table class="students-table">
@@ -264,7 +269,6 @@
     ></button>
     <div class="form-add-student">
       <p class="form-label" title="formName">Add Student</p>
-
 
       <div class="button-form-exit-container" onclick="exit()">
         <div class="button-form-exit-element button-form-exit-element-1"></div>
