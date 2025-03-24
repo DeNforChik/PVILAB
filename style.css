@@ -161,7 +161,6 @@ span {
   margin: 0;
   padding: 0;
 }
-
 .bell-container {
   padding-right: 20px;
   padding-top: 10px;
@@ -169,7 +168,6 @@ span {
 .bell-container:hover {
   animation: ring 0.5s ease-in-out;
 }
-
 @keyframes ring {
   0% {
     transform: rotate(0deg);
@@ -1595,6 +1593,17 @@ tr.selected {
   .button-cancle-deletion {
     height: 8.5vw;
     width: 18vw;
+  }
+  .delete-selected-button{
+    position: absolute;
+    left:80%; 
+    top: -24%;
+    
+    font-family: Gilroy;
+    
+    font-weight: 500;
+    transform: translateX(0); 
+    
   }
 }
 @media screen and (max-width: 400px) {
