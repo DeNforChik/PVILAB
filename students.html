@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link href="gilroy/FontsStylesheet.css" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
     <title>CMS Students</title>
     <meta
       name="description"
@@ -317,6 +317,8 @@
             <label for="birthday">Birthday:</label>
             <input type="date" id="birthday" name="birthday" />
           </li>
+          
+          <input type="hidden" id="studentId" name="studentId" />
         </ul>
       </div>
       <button class="button-ok button-ok-add" onclick="addNewStudent()">
@@ -363,8 +365,9 @@
         Delete
       </button>
       <button class="button-cancle-deletion" onclick="exitDeletion()">
-        Cancle
+        Cancel
       </button>
     </div>
+    
   </body>
 </html>
