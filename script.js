@@ -392,6 +392,7 @@ window.addEventListener("load", function () {
         case "select":
           var newCheckbox = document.createElement("input");
           newCheckbox.type = "checkbox";
+          newCheckbox.setAttribute("aria-label", "checkbox");
           newCheckbox.addEventListener("change", function () {
             toggleRowColor(this);
           });
