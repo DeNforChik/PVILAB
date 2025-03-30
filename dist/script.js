@@ -1,5 +1,3 @@
-
-
 window.addEventListener("load", function () {
     var dot = document.querySelector(".dot");
     var dots = document.querySelector(".dots");
@@ -599,70 +597,82 @@ window.addEventListener("load", function () {
     var formList = document.querySelector(".form-container .form-list");
     var article = document.querySelector("article");
     var table = article.querySelector(".students-table");
-  
+
     var isValid = true;
     var letters = /^[A-Za-z]+$/;
-  
+    var currentYear = new Date().getFullYear(); // Get the current year
+
     var liList = formList.querySelectorAll("li");
     liList.forEach((li, index) => {
-      var selectElement = li.querySelector("select");
-      if (selectElement) {
-        var selectedValue = selectElement.value;
-      } else {
-        var selectedValue = li.querySelector("input").value;
-        var trimmedInputValue = selectedValue.trim();
-  
-        if (trimmedInputValue === "") {
-          isValid = false;
-          li.querySelector("input").style.border = "1px solid red";
+        var selectElement = li.querySelector("select");
+        if (selectElement) {
+            var selectedValue = selectElement.value;
+        } else {
+            var selectedValue = li.querySelector("input").value;
+            var trimmedInputValue = selectedValue.trim();
+
+            if (trimmedInputValue === "") {
+                isValid = false;
+                li.querySelector("input").style.border = "1px solid red";
+            }
+
+            if (
+                (index === 1 && !trimmedInputValue.match(letters)) ||
+                (index === 2 && !trimmedInputValue.match(letters))
+            ) {
+                isValid = false;
+                li.querySelector("input").style.border = "1px solid red";
+            }
+
+            // Validate birth year
+            if (index === 4) {
+                var birthYear = parseInt(trimmedInputValue, 10);
+                if (isNaN(birthYear) || birthYear > currentYear || birthYear < 1900) {
+                    isValid = false;
+                    li.querySelector("input").style.border = "1px solid red";
+                }
+            }
         }
-  
-        if (
-          (index === 1 && !trimmedInputValue.match(letters)) ||
-          (index === 2 && !trimmedInputValue.match(letters))
-        ) {
-          isValid = false;
-          li.querySelector("input").style.border = "1px solid red";
-        }
-      }
     });
-  
+
     if (!isValid) {
-      return;
+        return;
     }
-  
+
     var appBut = document.getElementsByClassName("button-ok-apply")[0];
-    var rowId = appBut.dataset.rowid;
+    var rowId = appBut.dataset.rowid; // Get the row ID
     var row = document.querySelector('tr[data-rowid="' + rowId + '"]');
     var cells = row.querySelectorAll("td");
     var headers = row.parentNode.querySelectorAll("th");
-  
-    let updatedStudent = {}; 
-  
+
+    let updatedStudent = {
+        id: rowId // Add the ID to the updatedStudent object
+    };
+
     headers.forEach((header, index) => {
         var headerText = header.textContent.trim().toLowerCase();
-  
+
         switch (headerText) {
             case "group":
                 var selectElement = liList[0].querySelector("select#group");
                 var trimmedInputValue = selectElement.value.trim();
-                updatedStudent.group = trimmedInputValue; 
-  
+                updatedStudent.group = trimmedInputValue;
+
                 var textNode = document.createTextNode(trimmedInputValue);
                 cells[index].textContent = "";
                 cells[index].appendChild(textNode);
-  
+
                 break;
             case "name":
                 var firstname = liList[1].querySelector("input#firstname").value.trim();
                 var lastname = liList[2].querySelector("input#lastname").value.trim();
                 var fullname = firstname + " " + lastname;
-                updatedStudent.name = fullname; 
-  
+                updatedStudent.name = fullname;
+
                 var textNode = document.createTextNode(fullname);
                 cells[index].textContent = "";
                 cells[index].appendChild(textNode);
-  
+
                 break;
             case "gender":
                 var selectElement = liList[3].querySelector("select#gender");
@@ -670,8 +680,8 @@ window.addEventListener("load", function () {
                 var capitalizedInputValue =
                     trimmedInputValue.charAt(0).toUpperCase() +
                     trimmedInputValue.slice(1);
-                updatedStudent.gender = capitalizedInputValue; 
-  
+                updatedStudent.gender = capitalizedInputValue;
+
                 var textNode = document.createTextNode(capitalizedInputValue);
                 cells[index].textContent = "";
                 cells[index].appendChild(textNode);
@@ -679,8 +689,8 @@ window.addEventListener("load", function () {
             case "birthday":
                 var selectElement = liList[4].querySelector("input#birthday");
                 var trimmedInputValue = selectElement.value.trim();
-                updatedStudent.birthday = trimmedInputValue; 
-  
+                updatedStudent.birthday = trimmedInputValue;
+
                 var textNode = document.createTextNode(trimmedInputValue);
                 cells[index].textContent = "";
                 cells[index].appendChild(textNode);
@@ -689,15 +699,15 @@ window.addEventListener("load", function () {
                 break;
         }
     });
-  
+
     row.draggable = "true";
     row.ondragstart = dragStart;
-  
-    
+
+    // Log the updated student data with ID
     console.log("Updated Student Data:", JSON.stringify(updatedStudent, null, 2));
-  
+
     exit();
-  }
+}
   
   function editStudent(div) {
     var okBut = document.getElementsByClassName("button-ok-apply")[0];
