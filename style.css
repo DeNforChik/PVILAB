@@ -204,7 +204,6 @@ span {
   margin: 0;
   padding-left: 12px;
 
-  font-family: Gilroy;
   font-size: 19px;
 }
 .message-profile-list li:last-child {
@@ -279,7 +278,6 @@ span {
   padding-left: 15px;
   padding-right: 10px;
 
-  font-family: Gilroy;
   font-size: 2.5vh;
 
   position: relative;
@@ -323,7 +321,6 @@ span {
   padding: 0;
   margin: 0;
 
-  font-family: Gilroy;
   font-size: 14px;
 }
 /*PROFILE HOVER*/
@@ -366,7 +363,6 @@ span {
   margin: 0;
 
   list-style-type: none;
-  font-family: Gilroy;
   font-size: 20px;
 }
 
@@ -444,7 +440,6 @@ span {
 
   text-align: center;
 
-  font-family: gilroy;
 }
 
 .navigation-list {
@@ -460,7 +455,6 @@ span {
   text-align: center;
 
   font-size: 22px;
-  font-family: Gilroy;
 }
 
 .navigation-list li a {
@@ -533,7 +527,6 @@ button {
   position: absolute;
   left: 15%; 
   top: 14%;
-  font-family: Gilroy;
   font-size: 50px;
   font-weight: 500;
   transform: translateX(0); 
@@ -548,7 +541,6 @@ button {
 .students-table {
   width: 70vw;
 
-  font-family: Gilroy;
   font-size: 17px;
 
   border-radius: 7px;
@@ -658,7 +650,6 @@ input[type="checkbox"] {
   box-shadow: 0 0 10px rgba(222, 226, 229, 0.8);
 }
 .clone-table {
-  font-family: Gilroy;
   font-size: 17px;
 
   margin: 0;
@@ -774,7 +765,6 @@ tr.selected {
 
   font-weight: 300;
   font-size: 23px;
-  font-family: Gilroy;
 
   opacity: 0.6;
 }
@@ -844,7 +834,6 @@ tr.selected {
 }
 
 .form-list label {
-  font-family: Gilroy;
   font-size: 21px;
 
   flex: 1;
@@ -993,7 +982,6 @@ tr.selected {
   left: 7%;
 
   font-size: 19px;
-  font-family: Gilroy;
 }
 
 
@@ -1065,7 +1053,6 @@ tr.selected {
   left: 7%;
 
   font-size: 22px;
-  font-family: Gilroy;
 }
 
 .deletion-text-start {
@@ -1075,11 +1062,9 @@ tr.selected {
   transform: translateX(-50%);
   width: 70%;
   font-size: 22px;
-  font-family: Gilroy;
 }
 .student-name-deletion {
   font-size: 22px;
-  font-family: Gilroy;
   font-weight: bold;
 }
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
@@ -1108,11 +1093,9 @@ tr.selected {
   }
   .deletion-text-start {
     font-size: 20px;
-    font-family: Gilroy;
   }
   .student-name-deletion {
     font-size: 21px;
-    font-family: Gilroy;
     font-weight: bold;
   }
 }
@@ -1122,7 +1105,6 @@ tr.selected {
     position: absolute;
     left: 5%; 
     top: 14%;
-    font-family: Gilroy;
     font-size: 50px;
     font-weight: 500;
     transform: translateX(0); 
@@ -1203,7 +1185,6 @@ tr.selected {
     text-align: center;
 
     font-size: 22px;
-    font-family: Gilroy;
   }
 
   .navigation-list li:last-child {
@@ -1394,7 +1375,6 @@ tr.selected {
     text-align: center;
 
     font-size: 22px;
-    font-family: Gilroy;
   }
 
   .navigation-list li:last-child {
@@ -1501,7 +1481,6 @@ tr.selected {
     position: absolute;
     left: 5%; 
     top: 9%;
-    font-family: Gilroy;
     font-size: 50px;
     font-weight: 500;
     transform: translateX(0); 
@@ -1599,8 +1578,7 @@ tr.selected {
     left:80%; 
     top: -24%;
     
-    font-family: Gilroy;
-    
+
     font-weight: 500;
     transform: translateX(0); 
     
@@ -1611,7 +1589,6 @@ tr.selected {
     position: absolute;
     left: 5%; 
     top: 11%;
-    font-family: Gilroy;
     font-size: 35px;
     font-weight: 500;
     transform: translateX(0); 

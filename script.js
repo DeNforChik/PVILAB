@@ -1349,7 +1349,6 @@ function deleteSelectedRows() {
     
   });
 
-// Измененная функция openDeletion
 function openDeletion1(rows) {
     var article = document.querySelector("article");
     var table = article.querySelector(".students-table");
@@ -1379,7 +1378,6 @@ function openDeletion1(rows) {
     deletionBut.dataset.rowids = rows.map(row => row.dataset.rowid).join(",");
 }
 
-// Обновленный обработчик события для deleteSelectedButton
 deleteSelectedButton.addEventListener("click", function() {
     const selectedRows = document.querySelectorAll(".students-table tr.selected");
     if (selectedRows.length > 0) {
@@ -1392,7 +1390,6 @@ document.querySelector(".button-ok-deletion").addEventListener("click", function
     exitDeletion();
 });
 
-// Измененная функция deleteSelectedRows
 function deleteSelectedRows() {
     const rowIds = document.querySelector(".button-ok-deletion").dataset.rowids.split(",");
     rowIds.forEach(rowId => {
@@ -1405,9 +1402,9 @@ function deleteSelectedRows() {
     manageEditDeleteButtons();
 }
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/sw.js")
-    .then(() => console.log("Service Worker registered"))
-    .catch((err) => console.error("Service Worker registration failed", err));
-}
+// if ("serviceWorker" in navigator) {
+//   navigator.serviceWorker
+//     .register("/sw.js")
+//     .then(() => console.log("Service Worker registered"))
+//     .catch((err) => console.error("Service Worker registration failed", err));
+// }
